@@ -2,12 +2,12 @@ package com.example.myandroid
 
 import android.app.Activity
 import android.os.Bundle
-import com.facebook.react.PackageList
 import com.facebook.react.ReactInstanceManager
 import com.facebook.react.ReactPackage
 import com.facebook.react.ReactRootView
 import com.facebook.react.common.LifecycleState
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler
+import com.facebook.react.shell.MainReactPackage
 import com.facebook.soloader.SoLoader
 
 class MyReactActivity : Activity(), DefaultHardwareBackBtnHandler {
@@ -18,7 +18,7 @@ class MyReactActivity : Activity(), DefaultHardwareBackBtnHandler {
         super.onCreate(savedInstanceState)
         SoLoader.init(this, false)
         reactRootView = ReactRootView(this)
-        val packages: List<ReactPackage> = PackageList(application).packages
+        val packages: List<ReactPackage> = listOf(MainReactPackage(null))
         // Packages that cannot be autolinked yet can be added manually here, for example:
         // packages.add(MyReactNativePackage())
         // Remember to include them in `settings.gradle` and `app/build.gradle` too.
@@ -30,6 +30,7 @@ class MyReactActivity : Activity(), DefaultHardwareBackBtnHandler {
             .addPackages(packages)
             .setUseDeveloperSupport(BuildConfig.DEBUG)
             .setInitialLifecycleState(LifecycleState.RESUMED)
+            .setJsEngineAsHermes(true)
             .build()
         // The string here (e.g. "MyReactNativeApp") has to match
         // the string in AppRegistry.registerComponent() in index.js
