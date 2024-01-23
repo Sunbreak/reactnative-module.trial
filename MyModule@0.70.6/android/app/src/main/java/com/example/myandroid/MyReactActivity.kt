@@ -39,7 +39,7 @@ class MyReactActivity : Activity(), DefaultHardwareBackBtnHandler {
 
     override fun onDestroy() {
         super.onDestroy()
-        reactInstanceManager.onHostDestroy(this)
+        reactInstanceManager.destroy()
         reactRootView.unmountReactApplication()
     }
 
