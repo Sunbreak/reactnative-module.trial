@@ -1,0 +1,16 @@
+{
+  "name": "FabricModule",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "yarn react-native run-android --main-activity MyReactActivity",
+    "start": "yarn react-native start"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-native": "^0.72.5"
+  },
+  "devDependencies": {
+    "@react-native/metro-config": "^0.72.11"
+  }
+}
