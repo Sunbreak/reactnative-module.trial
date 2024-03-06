@@ -1,3 +1,5 @@
+import groovy.lang.Closure
+
 pluginManagement {
     repositories {
         google()
@@ -6,7 +8,7 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
         mavenCentral()
@@ -14,5 +16,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "MyAndroid"
+apply(from = "../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); (extra["applyNativeModulesSettingsGradle"] as Closure<*>).call(settings)
 include(":app")
+includeBuild("../node_modules/@react-native/gradle-plugin")
  
