@@ -7,6 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { fetch } from "@react-native-community/netinfo";
 import { GestureHandlerRootView, TapGestureHandler, State } from 'react-native-gesture-handler';
+import LinearGradient from 'react-native-linear-gradient';
 
 // react-native-webview
 //const HelloWorld = () => {
@@ -93,23 +94,34 @@ import { GestureHandlerRootView, TapGestureHandler, State } from 'react-native-g
 //};
 
 // react-native-gesture-handler
-const HelloWorld = () => {
-  const onSingleTapEvent = (event) => {
-    if (event.nativeEvent.state === State.ACTIVE) {
-      console.log('Hey single tap!');
-    }
-    console.log('aaa');
-  };
+//const HelloWorld = () => {
+//  const onSingleTapEvent = (event) => {
+//    if (event.nativeEvent.state === State.ACTIVE) {
+//      console.log('Hey single tap!');
+//    }
+//    console.log('aaa');
+//  };
+//
+//  return (
+//    <GestureHandlerRootView style={styles.container}>
+//      <Text>Single Tap Gesture Handler</Text>
+//      <TapGestureHandler onHandlerStateChange={onSingleTapEvent}>
+//        <View style={styles.square} />
+//      </TapGestureHandler>
+//    </GestureHandlerRootView>
+//  );
+//};
 
+// react-native-linear-gradient
+const HelloWorld = () => {
   return (
-    <GestureHandlerRootView style={styles.container}>
-      <Text>Single Tap Gesture Handler</Text>
-      <TapGestureHandler onHandlerStateChange={onSingleTapEvent}>
-        <View style={styles.square} />
-      </TapGestureHandler>
-    </GestureHandlerRootView>
+    <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.linearGradient}>
+      <Text style={styles.buttonText}>
+        Sign in with Facebook
+      </Text>
+    </LinearGradient>
   );
-};
+}
 
 var styles = StyleSheet.create({
   container: {
@@ -126,6 +138,20 @@ var styles = StyleSheet.create({
     height: 150,
     backgroundColor: '#28b5b5',
     marginTop: 22,
+  },
+  linearGradient: {
+    flex: 1,
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderRadius: 5
+  },
+  buttonText: {
+    fontSize: 18,
+    fontFamily: 'Gill Sans',
+    textAlign: 'center',
+    margin: 10,
+    color: '#ffffff',
+    backgroundColor: 'transparent',
   },
 });
 
