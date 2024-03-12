@@ -3326,6 +3326,11 @@ react-native-gradle-plugin@^0.0.7:
   resolved "http://npm.devops.xiaohongshu.com:7001/react-native-gradle-plugin/download/react-native-gradle-plugin-0.0.7.tgz#96602f909745239deab7b589443f14fce5da2056"
   integrity sha1-lmAvkJdFI53qt7WJRD8U/OXaIFY=
 
+react-native-safe-area-context@4.3.1:
+  version "4.3.1"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/react-native-safe-area-context/download/react-native-safe-area-context-4.3.1.tgz#5cf97b25b395e0d09bc1f828920cd7da0d792ade"
+  integrity sha1-XPl7JbOV4NCbwfgokgzX2g15Kt4=
+
 react-native-webview@11.22.2:
   version "11.22.2"
   resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/react-native-webview/download/react-native-webview-11.22.2.tgz#0a57893b637c2825c83395f22b686cc6ac88e465"
