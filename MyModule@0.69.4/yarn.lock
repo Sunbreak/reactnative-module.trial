@@ -714,6 +714,13 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
+"@egjs/hammerjs@^2.0.17":
+  version "2.0.17"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@egjs/hammerjs/download/@egjs/hammerjs-2.0.17.tgz#5dc02af75a6a06e4c2db0202cae38c9263895124"
+  integrity sha1-XcAq91pqBuTC2wICyuOMkmOJUSQ=
+  dependencies:
+    "@types/hammerjs" "^2.0.36"
+
 "@hapi/hoek@^9.0.0":
   version "9.3.0"
   resolved "http://npm.devops.xiaohongshu.com:7001/@hapi/hoek/download/@hapi/hoek-9.3.0.tgz#8368869dcb735be2e7f5cb7647de78e167a251fb"
@@ -1057,6 +1064,11 @@
   integrity sha1-4UsldqHCUCa38C7eHeO4TDoe/q4=
   dependencies:
     "@types/node" "*"
+
+"@types/hammerjs@^2.0.36":
+  version "2.0.45"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@types/hammerjs/-/hammerjs-2.0.45.tgz#ffa764bb68a66c08db6efb9c816eb7be850577b1"
+  integrity sha512-qkcUlZmX6c4J8q45taBKTL3p+LbITgyx7qhlPYOdOHZB7B31K0mXbP5YA7i7SgDeEGuI9MnumiKPEMrxg8j3KQ==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.4"
@@ -2144,6 +2156,13 @@ hermes-profile-transformer@^0.0.6:
   dependencies:
     source-map "^0.7.3"
 
+hoist-non-react-statics@^3.3.0:
+  version "3.3.2"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/hoist-non-react-statics/download/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
+  integrity sha1-7OCsr3HWLClpwuxZ/v9CpLGoW0U=
+  dependencies:
+    react-is "^16.7.0"
+
 http-errors@2.0.0:
   version "2.0.0"
   resolved "http://npm.devops.xiaohongshu.com:7001/http-errors/download/http-errors-2.0.0.tgz#b7774a1486ef73cf7667ac9ae0858c012c57b9d3"
@@ -2601,7 +2620,7 @@ lodash.throttle@^4.1.1:
   resolved "http://npm.devops.xiaohongshu.com:7001/lodash.throttle/download/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
-lodash@^4.17.15:
+lodash@^4.17.15, lodash@^4.17.21:
   version "4.17.21"
   resolved "http://npm.devops.xiaohongshu.com:7001/lodash/download/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
@@ -2623,7 +2642,7 @@ logkitty@^0.7.1:
     dayjs "^1.8.15"
     yargs "^15.1.0"
 
-loose-envify@^1.0.0, loose-envify@^1.1.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "http://npm.devops.xiaohongshu.com:7001/loose-envify/download/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=
@@ -3366,6 +3385,15 @@ prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
+prop-types@^15.7.2:
+  version "15.8.1"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/prop-types/download/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
+  integrity sha1-Z9h78aaU9IQ1zzMsJK8QIUoxQLU=
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.13.1"
+
 pump@^3.0.0:
   version "3.0.0"
   resolved "http://npm.devops.xiaohongshu.com:7001/pump/download/pump-3.0.0.tgz#b4a2116815bde2f4e1ea602354e8c75565107a64"
@@ -3407,7 +3435,7 @@ react-freeze@^1.0.0:
   resolved "http://npm.devops.xiaohongshu.com:7001/react-is/download/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha1-GZQx7qqi4J+GQn77tPFHPttHYJs=
 
-react-is@^16.13.0:
+react-is@^16.13.0, react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/react-is/download/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
@@ -3426,6 +3454,17 @@ react-native-codegen@^0.69.1:
     flow-parser "^0.121.0"
     jscodeshift "^0.13.1"
     nullthrows "^1.1.1"
+
+react-native-gesture-handler@2.5.0:
+  version "2.5.0"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/react-native-gesture-handler/download/react-native-gesture-handler-2.5.0.tgz#61385583570ed0a45a9ed142425e35f8fe8274fb"
+  integrity sha1-YThVg1cO0KRantFCQl41+P6CdPs=
+  dependencies:
+    "@egjs/hammerjs" "^2.0.17"
+    hoist-non-react-statics "^3.3.0"
+    invariant "^2.2.4"
+    lodash "^4.17.21"
+    prop-types "^15.7.2"
 
 react-native-gradle-plugin@^0.0.7:
   version "0.0.7"
