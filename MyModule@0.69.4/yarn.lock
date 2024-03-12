@@ -1750,6 +1750,11 @@ escape-html@~1.0.3:
   resolved "http://npm.devops.xiaohongshu.com:7001/escape-html/download/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
   integrity sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
 
+escape-string-regexp@2.0.0:
+  version "2.0.0"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/escape-string-regexp/download/escape-string-regexp-2.0.0.tgz#a30304e99daa32e23b2fd20f51babd07cffca344"
+  integrity sha1-owME6Z2qMuI7L9IPUbq9B8/8o0Q=
+
 escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "http://npm.devops.xiaohongshu.com:7001/escape-string-regexp/download/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
@@ -2117,7 +2122,7 @@ inherits@2, inherits@2.0.4, inherits@^2.0.3, inherits@^2.0.4, inherits@~2.0.3:
   resolved "http://npm.devops.xiaohongshu.com:7001/inherits/download/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w=
 
-invariant@^2.2.4:
+invariant@2.2.4, invariant@^2.2.4:
   version "2.2.4"
   resolved "http://npm.devops.xiaohongshu.com:7001/invariant/download/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha1-YQ88ksk1nOHbYW5TgAjSP/NRWOY=
@@ -3320,6 +3325,14 @@ react-native-gradle-plugin@^0.0.7:
   version "0.0.7"
   resolved "http://npm.devops.xiaohongshu.com:7001/react-native-gradle-plugin/download/react-native-gradle-plugin-0.0.7.tgz#96602f909745239deab7b589443f14fce5da2056"
   integrity sha1-lmAvkJdFI53qt7WJRD8U/OXaIFY=
+
+react-native-webview@11.22.2:
+  version "11.22.2"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/react-native-webview/download/react-native-webview-11.22.2.tgz#0a57893b637c2825c83395f22b686cc6ac88e465"
+  integrity sha1-CleJO2N8KCXIM5XyK2hsxqyI5GU=
+  dependencies:
+    escape-string-regexp "2.0.0"
+    invariant "2.2.4"
 
 react-native@0.69.4:
   version "0.69.4"

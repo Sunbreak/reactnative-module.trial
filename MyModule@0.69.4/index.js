@@ -1,13 +1,12 @@
 import React from 'react';
 import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+import { WebView } from 'react-native-webview';
 
+// react-native-webview
 const HelloWorld = () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.hello}>Hello, World</Text>
-    </View>
-  );
+  return <WebView source={{ uri: 'https://reactnative.dev/' }} style={{ flex: 1 }} />;
 };
+
 var styles = StyleSheet.create({
   container: {
     flex: 1,
