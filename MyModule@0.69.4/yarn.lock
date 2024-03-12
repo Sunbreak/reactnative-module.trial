@@ -972,6 +972,11 @@
     prompts "^2.4.0"
     semver "^6.3.0"
 
+"@react-native-community/netinfo@9.0.0":
+  version "9.0.0"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@react-native-community/netinfo/download/@react-native-community/netinfo-9.0.0.tgz#d5f64158af5c0772b11bdf0aaba569f944b99589"
+  integrity sha1-1fZBWK9cB3KxG98Kq6Vp+US5lYk=
+
 "@react-native/assets@1.0.0":
   version "1.0.0"
   resolved "http://npm.devops.xiaohongshu.com:7001/@react-native/assets/download/@react-native/assets-1.0.0.tgz#c6f9bf63d274bafc8e970628de24986b30a55c8e"

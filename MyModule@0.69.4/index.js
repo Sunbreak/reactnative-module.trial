@@ -5,6 +5,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { fetch } from "@react-native-community/netinfo";
 
 // react-native-webview
 //const HelloWorld = () => {
@@ -41,39 +42,52 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //};
 
 // react-native-screen
-const Stack = createNativeStackNavigator();
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to About"
-        onPress={() => navigation.navigate("About")}
-      />
-    </View>
-  );
-}
-function AboutScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>About Screen</Text>
-    </View>
-  );
-}
+//const Stack = createNativeStackNavigator();
+//function HomeScreen({ navigation }) {
+//  return (
+//    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+//      <Text>Home Screen</Text>
+//      <Button
+//        title="Go to About"
+//        onPress={() => navigation.navigate("About")}
+//      />
+//    </View>
+//  );
+//}
+//function AboutScreen() {
+//  return (
+//    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+//      <Text>About Screen</Text>
+//    </View>
+//  );
+//}
+//const HelloWorld = () => {
+//  return (
+//    <NavigationContainer>
+//      <Stack.Navigator>
+//        <Stack.Screen
+//          name="Home"
+//          component={HomeScreen}
+//        />
+//        <Stack.Screen
+//          name="About"
+//          component={AboutScreen}
+//        />
+//      </Stack.Navigator>
+//    </NavigationContainer>
+//  );
+//};
+
+// @react-native-community/netinfo
+const fetchNetInfo = async () => {
+  const { type, isConnected } = await fetch();
+  console.log("type", type, "isConnected", isConnected);
+};
 const HelloWorld = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-        />
-        <Stack.Screen
-          name="About"
-          component={AboutScreen}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <View style={styles.container}>
+      <Button title="fetchNetInfo" onPress={fetchNetInfo} />
+    </View>
   );
 };
 
