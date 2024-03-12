@@ -1,7 +1,7 @@
 package com.example.myandroid
 
-import android.app.Activity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.facebook.react.PackageList
 import com.facebook.react.ReactInstanceManager
 import com.facebook.react.ReactPackage
@@ -10,12 +10,12 @@ import com.facebook.react.common.LifecycleState
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler
 import com.facebook.soloader.SoLoader
 
-class MyReactActivity : Activity(), DefaultHardwareBackBtnHandler {
+class MyReactActivity : AppCompatActivity(), DefaultHardwareBackBtnHandler {
     private lateinit var reactRootView: ReactRootView
     private lateinit var reactInstanceManager: ReactInstanceManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        super.onCreate(null)
         SoLoader.init(this, false)
         reactRootView = ReactRootView(this)
         val packages: List<ReactPackage> = PackageList(application).packages

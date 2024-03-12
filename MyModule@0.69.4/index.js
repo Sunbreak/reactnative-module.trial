@@ -3,6 +3,8 @@ import {AppRegistry, StyleSheet, Text, View, Button} from 'react-native';
 import { WebView } from 'react-native-webview';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // react-native-webview
 //const HelloWorld = () => {
@@ -21,20 +23,57 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 //};
 
 // @react-native-async-storage/async-storage
-const asyncStorage = async () => {
-  try {
-    await AsyncStorage.setItem("my-key", "my-value");
-    const value = await AsyncStorage.getItem("my-key");
-    console.log(value);
-  } catch (error) {
-    console.log(error);
-  }
-};
+//const asyncStorage = async () => {
+//  try {
+//    await AsyncStorage.setItem("my-key", "my-value");
+//    const value = await AsyncStorage.getItem("my-key");
+//    console.log(value);
+//  } catch (error) {
+//    console.log(error);
+//  }
+//};
+//const HelloWorld = () => {
+//  return (
+//    <View style={styles.container}>
+//      <Button title="asyncStorage" onPress={asyncStorage} />
+//    </View>
+//  );
+//};
+
+// react-native-screen
+const Stack = createNativeStackNavigator();
+function HomeScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to About"
+        onPress={() => navigation.navigate("About")}
+      />
+    </View>
+  );
+}
+function AboutScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Text>About Screen</Text>
+    </View>
+  );
+}
 const HelloWorld = () => {
   return (
-    <View style={styles.container}>
-      <Button title="asyncStorage" onPress={asyncStorage} />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+        />
+        <Stack.Screen
+          name="About"
+          component={AboutScreen}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
