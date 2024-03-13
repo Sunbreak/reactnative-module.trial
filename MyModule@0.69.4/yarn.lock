@@ -3585,6 +3585,11 @@ react-native-gradle-plugin@^0.0.7:
   resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/react-native-gradle-plugin/download/react-native-gradle-plugin-0.0.7.tgz#96602f909745239deab7b589443f14fce5da2056"
   integrity sha1-lmAvkJdFI53qt7WJRD8U/OXaIFY=
 
+react-native-image-picker@4.8.5:
+  version "4.8.5"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/react-native-image-picker/download/react-native-image-picker-4.8.5.tgz#5e5a0af56a13957cadfa1f8ce349d036d62e1499"
+  integrity sha1-XloK9WoTlXyt+h+M40nQNtYuFJk=
+
 react-native-linear-gradient@2.6.2:
   version "2.6.2"
   resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/react-native-linear-gradient/download/react-native-linear-gradient-2.6.2.tgz#56598a76832724b2afa7889747635b5c80948f38"

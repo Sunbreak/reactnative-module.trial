@@ -9,6 +9,7 @@ import { fetch } from "@react-native-community/netinfo";
 import { GestureHandlerRootView, TapGestureHandler, State } from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
 import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
+import { launchImageLibrary } from 'react-native-image-picker';
 
 // react-native-webview
 //const HelloWorld = () => {
@@ -125,34 +126,48 @@ import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-na
 //}
 
 // react-native-reanimated
+//const HelloWorld = () => {
+//  const width = useSharedValue(100);
+//
+//  const animatedStyles = useAnimatedStyle(() => {
+//    return {
+//      width: width.value
+//    };
+//  }, []);
+//
+//  const handlePress = () => {
+//    width.value = withSpring(width.value + 50);
+//  };
+//
+//  return (
+//    <View style={{ flex: 1, alignItems: 'center' }}>
+//      <Animated.View
+//        style={[
+//          {
+//            height: 100,
+//            backgroundColor: 'violet',
+//          },
+//          animatedStyles
+//        ]}
+//      />
+//      <Button onPress={handlePress} title="Click me" />
+//    </View>
+//  );
+//}
+
+// react-native-image-picker
 const HelloWorld = () => {
-  const width = useSharedValue(100);
-
-  const animatedStyles = useAnimatedStyle(() => {
-    return {
-      width: width.value
-    };
-  }, []);
-
-  const handlePress = () => {
-    width.value = withSpring(width.value + 50);
+  const handlePress = async () => {
+    const result = await launchImageLibrary();
+    console.log('result', result);
   };
 
   return (
-    <View style={{ flex: 1, alignItems: 'center' }}>
-      <Animated.View
-        style={[
-          {
-            height: 100,
-            backgroundColor: 'violet',
-          },
-          animatedStyles
-        ]}
-      />
-      <Button onPress={handlePress} title="Click me" />
+    <View style={styles.container}>
+      <Button onPress={handlePress} title="Pick image" />
     </View>
   );
-}
+};
 
 var styles = StyleSheet.create({
   container: {

@@ -1,6 +1,9 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext.kotlin_version = "1.6.10"
+    // FIXME for react-native-image-picker rootProject.ext.compileSdkVersion/targetSdkVersion
+    ext.compileSdkVersion = 32
+    ext.targetSdkVersion = 32
     repositories {
         google()
         mavenCentral()
