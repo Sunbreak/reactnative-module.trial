@@ -11,6 +11,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 import { launchImageLibrary } from 'react-native-image-picker';
 import { Picker } from '@react-native-picker/picker';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 // react-native-webview
 //const HelloWorld = () => {
@@ -171,18 +172,61 @@ import { Picker } from '@react-native-picker/picker';
 //};
 
 // @react-native-picker/picker
+//const HelloWorld = () => {
+//  const [selectedLanguage, setSelectedLanguage] = useState();
+//
+//  return (
+//    <View style={styles.container}>
+//      <Picker
+//        selectedValue={selectedLanguage}
+//        onValueChange={(itemValue, itemIndex) => setSelectedLanguage(itemValue)}
+//      >
+//        <Picker.Item label="Java" value="java" />
+//        <Picker.Item label="JavaScript" value="js" />
+//      </Picker>
+//    </View>
+//  );
+//};
+
+// @react-native-community/datetimepicker
 const HelloWorld = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState();
+  const [date, setDate] = useState(new Date(1598051730000));
+  const [mode, setMode] = useState('date');
+  const [show, setShow] = useState(false);
+
+  const onChange = (event, selectedDate) => {
+    const currentDate = selectedDate;
+    setShow(false);
+    setDate(currentDate);
+  };
+
+  const showMode = (currentMode) => {
+    setShow(true);
+    setMode(currentMode);
+  };
+
+  const showDatepicker = () => {
+    showMode('date');
+  };
+
+  const showTimepicker = () => {
+    showMode('time');
+  };
 
   return (
     <View style={styles.container}>
-      <Picker
-        selectedValue={selectedLanguage}
-        onValueChange={(itemValue, itemIndex) => setSelectedLanguage(itemValue)}
-      >
-        <Picker.Item label="Java" value="java" />
-        <Picker.Item label="JavaScript" value="js" />
-      </Picker>
+      <Button onPress={showDatepicker} title="Show date picker!" />
+      <Button onPress={showTimepicker} title="Show time picker!" />
+      <Text>selected: {date.toLocaleString()}</Text>
+      {show && (
+        <DateTimePicker
+          testID="dateTimePicker"
+          value={date}
+          mode={mode}
+          is24Hour={true}
+          onChange={onChange}
+        />
+      )}
     </View>
   );
 };
