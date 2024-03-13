@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {AppRegistry, StyleSheet, Text, View, Button} from 'react-native';
 import { WebView } from 'react-native-webview';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
@@ -10,6 +10,7 @@ import { GestureHandlerRootView, TapGestureHandler, State } from 'react-native-g
 import LinearGradient from 'react-native-linear-gradient';
 import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 import { launchImageLibrary } from 'react-native-image-picker';
+import { Picker } from '@react-native-picker/picker';
 
 // react-native-webview
 //const HelloWorld = () => {
@@ -156,15 +157,32 @@ import { launchImageLibrary } from 'react-native-image-picker';
 //}
 
 // react-native-image-picker
+//const HelloWorld = () => {
+//  const handlePress = async () => {
+//    const result = await launchImageLibrary();
+//    console.log('result', result);
+//  };
+//
+//  return (
+//    <View style={styles.container}>
+//      <Button onPress={handlePress} title="Pick image" />
+//    </View>
+//  );
+//};
+
+// @react-native-picker/picker
 const HelloWorld = () => {
-  const handlePress = async () => {
-    const result = await launchImageLibrary();
-    console.log('result', result);
-  };
+  const [selectedLanguage, setSelectedLanguage] = useState();
 
   return (
     <View style={styles.container}>
-      <Button onPress={handlePress} title="Pick image" />
+      <Picker
+        selectedValue={selectedLanguage}
+        onValueChange={(itemValue, itemIndex) => setSelectedLanguage(itemValue)}
+      >
+        <Picker.Item label="Java" value="java" />
+        <Picker.Item label="JavaScript" value="js" />
+      </Picker>
     </View>
   );
 };

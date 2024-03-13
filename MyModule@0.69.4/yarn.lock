@@ -989,6 +989,11 @@
   resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@react-native-community/netinfo/download/@react-native-community/netinfo-9.0.0.tgz#d5f64158af5c0772b11bdf0aaba569f944b99589"
   integrity sha1-1fZBWK9cB3KxG98Kq6Vp+US5lYk=
 
+"@react-native-picker/picker@2.4.1":
+  version "2.4.1"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@react-native-picker/picker/download/@react-native-picker/picker-2.4.1.tgz#92feb7e0672d739624517dae04bf4de1452dfcdc"
+  integrity sha1-kv634Gctc5YkUX2uBL9N4UUt/Nw=
+
 "@react-native/assets@1.0.0":
   version "1.0.0"
   resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@react-native/assets/download/@react-native/assets-1.0.0.tgz#c6f9bf63d274bafc8e970628de24986b30a55c8e"
