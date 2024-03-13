@@ -1058,6 +1058,14 @@
   dependencies:
     nanoid "^3.1.23"
 
+"@shopify/flash-list@1.2.2":
+  version "1.2.2"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@shopify/flash-list/download/@shopify/flash-list-1.2.2.tgz#4c4e98745303b918c2c25ce1a4711d225a022326"
+  integrity sha1-TE6YdFMDuRjCwlzhpHEdIloCIyY=
+  dependencies:
+    recyclerlistview "4.1.2"
+    tslib "2.4.0"
+
 "@sideway/address@^4.1.5":
   version "4.1.5"
   resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/@sideway/address/-/address-4.1.5.tgz#4bc149a0076623ced99ca8208ba780d65a99b9d5"
@@ -2623,7 +2631,7 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
-lodash.debounce@^4.0.8:
+lodash.debounce@4.0.8, lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/lodash.debounce/download/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
@@ -3511,7 +3519,7 @@ prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.7.2:
+prop-types@15.8.1, prop-types@^15.7.2:
   version "15.8.1"
   resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/prop-types/download/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha1-Z9h78aaU9IQ1zzMsJK8QIUoxQLU=
@@ -3736,6 +3744,15 @@ recast@^0.20.4:
     esprima "~4.0.0"
     source-map "~0.6.1"
     tslib "^2.0.1"
+
+recyclerlistview@4.1.2:
+  version "4.1.2"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/recyclerlistview/download/recyclerlistview-4.1.2.tgz#3629c2faff13be3dc64bca82490e9a5efb2303aa"
+  integrity sha1-NinC+v8Tvj3GS8qCSQ6aXvsjA6o=
+  dependencies:
+    lodash.debounce "4.0.8"
+    prop-types "15.8.1"
+    ts-object-utils "0.0.5"
 
 regenerate-unicode-properties@^10.1.0:
   version "10.1.1"
@@ -4276,6 +4293,16 @@ tr46@~0.0.3:
   version "0.0.3"
   resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/tr46/download/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
   integrity sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=
+
+ts-object-utils@0.0.5:
+  version "0.0.5"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/ts-object-utils/download/ts-object-utils-0.0.5.tgz#95361cdecd7e52167cfc5e634c76345e90a26077"
+  integrity sha1-lTYc3s1+UhZ8/F5jTHY0XpCiYHc=
+
+tslib@2.4.0:
+  version "2.4.0"
+  resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/tslib/download/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
+  integrity sha1-fOyqfwc85oCgWEeqd76UEJjzbcM=
 
 tslib@^2.0.1:
   version "2.6.2"
