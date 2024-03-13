@@ -4,11 +4,12 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.facebook.react.PackageList
 import com.facebook.react.ReactInstanceManager
-import com.facebook.react.ReactPackage
 import com.facebook.react.ReactRootView
+import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.common.LifecycleState
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler
 import com.facebook.soloader.SoLoader
+import com.swmansion.reanimated.ReanimatedPackage
 
 class MyReactActivity : AppCompatActivity(), DefaultHardwareBackBtnHandler {
     private lateinit var reactRootView: ReactRootView
@@ -18,7 +19,17 @@ class MyReactActivity : AppCompatActivity(), DefaultHardwareBackBtnHandler {
         super.onCreate(null)
         SoLoader.init(this, false)
         reactRootView = ReactRootView(this)
-        val packages: List<ReactPackage> = PackageList(application).packages
+
+        val reanimatedPackage = object : ReanimatedPackage() {
+            override fun getReactInstanceManager(reactContext: ReactApplicationContext?): ReactInstanceManager {
+                return reactInstanceManager
+            }
+        }
+        val packages = PackageList(application).packages.also { it ->
+            it.replaceAll { p ->
+                if (p is ReanimatedPackage) reanimatedPackage else p
+            }
+        }
         // Packages that cannot be autolinked yet can be added manually here, for example:
         // packages.add(MyReactNativePackage())
         // Remember to include them in `settings.gradle` and `app/build.gradle` too.

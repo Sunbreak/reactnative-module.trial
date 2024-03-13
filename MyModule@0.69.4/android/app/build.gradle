@@ -3,6 +3,11 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+// FIXME for react-native-reanimated appProject?.ext?.react?.enableHermes
+project.ext.react = [
+    enableHermes: false,  // clean and rebuild if changing
+]
+
 android {
     compileSdk 32
 

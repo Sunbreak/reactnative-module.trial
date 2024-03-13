@@ -8,6 +8,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { fetch } from "@react-native-community/netinfo";
 import { GestureHandlerRootView, TapGestureHandler, State } from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
+import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 
 // react-native-webview
 //const HelloWorld = () => {
@@ -113,13 +114,43 @@ import LinearGradient from 'react-native-linear-gradient';
 //};
 
 // react-native-linear-gradient
+//const HelloWorld = () => {
+//  return (
+//    <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.linearGradient}>
+//      <Text style={styles.buttonText}>
+//        Sign in with Facebook
+//      </Text>
+//    </LinearGradient>
+//  );
+//}
+
+// react-native-reanimated
 const HelloWorld = () => {
+  const width = useSharedValue(100);
+
+  const animatedStyles = useAnimatedStyle(() => {
+    return {
+      width: width.value
+    };
+  }, []);
+
+  const handlePress = () => {
+    width.value = withSpring(width.value + 50);
+  };
+
   return (
-    <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.linearGradient}>
-      <Text style={styles.buttonText}>
-        Sign in with Facebook
-      </Text>
-    </LinearGradient>
+    <View style={{ flex: 1, alignItems: 'center' }}>
+      <Animated.View
+        style={[
+          {
+            height: 100,
+            backgroundColor: 'violet',
+          },
+          animatedStyles
+        ]}
+      />
+      <Button onPress={handlePress} title="Click me" />
+    </View>
   );
 }
 
