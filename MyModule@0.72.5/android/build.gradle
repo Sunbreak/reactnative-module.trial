@@ -8,7 +8,6 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:7.4.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath("com.facebook.react:react-native-gradle-plugin")
     }
 }
 
@@ -16,6 +15,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
     }
 }
 
