@@ -3615,6 +3615,11 @@ react-native-linear-gradient@2.6.2:
   resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/react-native-linear-gradient/download/react-native-linear-gradient-2.6.2.tgz#56598a76832724b2afa7889747635b5c80948f38"
   integrity sha1-VlmKdoMnJLKvp4iXR2NbXICUjzg=
 
+react-native-pager-view@5.4.24:
+  version "5.4.24"
+  resolved "https://registry.yarnpkg.com/react-native-pager-view/-/react-native-pager-view-5.4.24.tgz#8626e757ddc55e41eca66d2f8a8a75aec54591ee"
+  integrity sha512-dRMB7i3B+mu4NCeIN6gqbR/kC/rr2wzqO0gisXDdJwJr78G24sWoTNpLEDFo3G8TFHY9nTMutVl5CUvkN2dp6g==
+
 react-native-reanimated@3.0.0-rc.6:
   version "3.0.0-rc.6"
   resolved "https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/react-native-reanimated/download/react-native-reanimated-3.0.0-rc.6.tgz#260a3f84d77bce3bed30a2d0da778b62c6a8e0f6"

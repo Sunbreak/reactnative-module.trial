@@ -13,6 +13,7 @@ import { launchImageLibrary } from 'react-native-image-picker';
 import { Picker } from '@react-native-picker/picker';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { FlashList } from "@shopify/flash-list";
+import PagerView from 'react-native-pager-view';
 
 // react-native-webview
 //const HelloWorld = () => {
@@ -233,22 +234,36 @@ import { FlashList } from "@shopify/flash-list";
 //};
 
 // @shopify/flash-list
-const DATA = [
-  {
-    title: "First Item",
-  },
-  {
-    title: "Second Item",
-  },
-];
+// const DATA = [
+//   {
+//     title: "First Item",
+//   },
+//   {
+//     title: "Second Item",
+//   },
+// ];
 
+// const HelloWorld = () => {
+//   return (
+//     <FlashList
+//       data={DATA}
+//       renderItem={({ item }) => <Text>{item.title}</Text>}
+//       estimatedItemSize={200}
+//     />
+//   );
+// };
+
+// react-native-pager-view
 const HelloWorld = () => {
   return (
-    <FlashList
-      data={DATA}
-      renderItem={({ item }) => <Text>{item.title}</Text>}
-      estimatedItemSize={200}
-    />
+    <PagerView style={styles.pagerView} initialPage={0}>
+      <View key="1">
+        <Text>First page</Text>
+      </View>
+      <View key="2">
+        <Text>Second page</Text>
+      </View>
+    </PagerView>
   );
 };
 
@@ -281,6 +296,9 @@ var styles = StyleSheet.create({
     margin: 10,
     color: '#ffffff',
     backgroundColor: 'transparent',
+  },
+  pagerView: {
+    flex: 1,
   },
 });
 
